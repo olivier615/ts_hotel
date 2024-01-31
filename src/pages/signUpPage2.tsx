@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 import { TbCircleNumber2 } from "react-icons/tb";
 import { FaRegCircleCheck } from "react-icons/fa6";
 import TwCities from "../data/TwCities.json"
-import { useContext, useState } from 'react'
+import { useContext, useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useNavigate } from "react-router-dom"
 import { MyContext } from './memberLayout';
@@ -19,7 +19,10 @@ const SignUpPage2 = () => {
   const navigate = useNavigate()
   const [county, setCounty] = useState<string>('臺北市')
   type selectList = string[]
-  const selectedCounty = (TwCities.find(i => i.name === county))?.districts || {}
+  let selectedCounty = (TwCities.find(i => i.name === county))?.districts || []
+  useEffect(() => {
+    selectedCounty = (TwCities.find(i => i.name === county))?.districts || []
+  }, [])
 
   const yearList: selectList = []
   for (let i = 0; i < 30; i++) {
@@ -36,7 +39,7 @@ const SignUpPage2 = () => {
     monthList.push(i.toString())
   }
 
-  const getCountyValue = (e) => {
+  const getCountyValue = (e: any) => {
     setCounty(e.target.value)
   }
 
@@ -45,7 +48,12 @@ const SignUpPage2 = () => {
     handleSubmit,
     formState: { errors },
   } = useForm({
-    defaultValues: {},
+    defaultValues: {
+      year: '1994',
+      month: '1',
+      date: '1',
+      districts: '100',
+    },
     // 錯誤驗證時機
     mode: 'onTouched',
   });

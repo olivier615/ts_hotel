@@ -1,6 +1,6 @@
 import axios from 'axios'
 import showSwal from '../libs/showSwal'
-import { useForm } from 'react-hook-form';
+import { useForm  } from 'react-hook-form';
 import { TbCircleNumber1, TbCircleNumber2 } from "react-icons/tb";
 import { useContext } from 'react'
 import { useNavigate } from "react-router-dom"
@@ -12,14 +12,14 @@ import { Link } from 'react-router-dom'
 const api = import.meta.env.VITE_API_LINK
 
 
-const SignUpPage = () => {
+const SignUpPage: React.FC = () => {
   const Context = useContext(MyContext);
   const navigate = useNavigate()
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({
+  } = useForm<Register1Form>({
     defaultValues: {
       email: '',
     },
@@ -127,15 +127,6 @@ const SignUpPage = () => {
                     }
                   }}
                 />
-                {/* <div className="d-flex justify-content-between">
-                  <div className="form-check">
-                    <input id="checkList1" type="checkbox"
-                      className="form-check-input"
-                      name="like" value='記住帳號' />
-                    <label className='form-check-label text-light' htmlFor="checkList1">記住帳號</label>
-                  </div>
-                  <a href="" className="text-primary" style={{ textDecoration: 'underline' }}>忘記密碼?</a>
-                </div> */}
                 <div className="d-flex mt-5">
                   <button type="submit" className="btn btn-primary w-100">下一步</button>
                 </div>

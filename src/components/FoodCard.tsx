@@ -1,4 +1,12 @@
-const FoodCard = ({ title, imgUrl, date, content }) => {
+
+interface FoodCardProps {
+  title: string;
+  imgUrl: string;
+  date: string;
+  content: string;
+}
+
+const FoodCard: React.FC<FoodCardProps> = ({ title, imgUrl, date, content }) => {
   return (
     <>
       <div className="food d-flex align-items-end" style={{backgroundImage: `url(${imgUrl})`}}>

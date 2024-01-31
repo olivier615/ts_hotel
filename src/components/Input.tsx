@@ -1,4 +1,16 @@
-const Input = ({ register, errors, id, labelText, type, rules, placeholder }) => {
+import { FieldValues, UseFormRegister} from 'react-hook-form';
+
+interface InputProps {
+  register: any;
+  errors: any;
+  id: string;
+  labelText: string;
+  type: string;
+  rules: {};
+  placeholder: string;
+}
+
+const Input: React.FC<InputProps>= ({ register, errors, id, labelText, type, rules, placeholder }) => {
   return (
     <div className='mb-3'>
       <label htmlFor={id} className='form-label text-light'>

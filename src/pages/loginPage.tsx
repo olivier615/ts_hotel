@@ -31,7 +31,7 @@ const LoginPage = () => {
     await axios.post(
       `${api}api/v1/user/login`, userData
     )
-    .then(res => {
+    .then(() => {
       showSwal('登入成功', 'success')
       waitAndNavigate(navigate, '/', 2000)
     })

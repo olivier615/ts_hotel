@@ -1,6 +1,9 @@
 import { Outlet, Link } from 'react-router-dom'
-import { createContext, useContext, useState } from 'react'
-const MyContext = createContext();
+import { createContext } from 'react'
+const MyContext = createContext({
+  email: '',
+  password: ''
+});
 
 const MemberLayout = () => {
   const contextValue = {
