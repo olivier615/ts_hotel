@@ -1,0 +1,242 @@
+.nav-fixed {
+  position: fixed;
+  width: 100vw;
+  z-index: 5000;
+}
+
+.home {
+
+  .row {
+    height: 100vh;
+  }
+  .fs_title {
+    font-size: 100px;
+    line-height: 120px;
+  }
+  .blur_box {
+    // background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+    background: linear-gradient(0deg, #F5F7F9, #F5F7F9);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+
+    border-radius: 80px;
+    border-top: 1px $light solid;
+    border-right: 1px $light solid;
+    border-bottom: 1px $light solid;
+    .blur_box_pe_200 {
+      margin-right: 200px;
+      padding: 96px 0;
+    }
+    .blur_box_move {
+      margin: -48px;
+    }
+    button {
+      width: 772px;
+      margin-top: 60px;
+    }
+  }
+}
+
+
+
+
+.home img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0.4;
+  z-index: -10;
+}
+
+footer {
+  padding-top: 80px;
+  padding-bottom: 120px;
+  img {
+    width: 196px;
+  }
+  .mb_40 {
+    margin-bottom: 40px;
+  }
+  .me_80 {
+    margin-right: 80px;
+  }
+}
+
+.about {
+  margin: 120px 0;
+}
+
+.about img {
+  width: 100vw;
+  object-fit: cover;
+  z-index: -10;
+}
+
+
+.news {
+  padding: 120px 0;
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.about_card {
+  background: linear-gradient(0deg, #FFFFFF, #FFFFFF);
+  background: linear-gradient(180deg, rgba(20, 15, 10, 0.8) 0%, rgba(190, 156, 124, 0.8) 100%);
+  margin-top: 80px;
+  border-radius: 80px 80px 0 80px;
+  padding: 80px;
+  border-left: $light solid 1px;
+  border-bottom: $light solid 1px;
+  .about_card_body {
+    margin-top: 80px;
+  }
+}
+
+.roomPeek, .foods, .traffic {
+  padding: 120px 0;
+}
+
+.roomPeekCard {
+  .roomImg {
+    width: 900px;
+    height: 900px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .row {
+    height: 900px;
+  }
+}
+
+.food {
+  width: 416px;
+  height: 600px;
+  background-size: cover;
+  border-radius: 8px;
+}
+
+.food_bg_blur {
+  background: linear-gradient(180deg, #FFFFFF, #FFFFFF);
+  background: linear-gradient(0deg, rgba(20, 15, 10, 0.8) 0%, #a7a7a78f 100%);
+}
+
+.foodCards {
+  margin-top: 80px;
+}
+
+.traffic_map {
+  margin-top: 80px;
+  margin-bottom: 40px;
+  img {
+    width: 100%;
+  }
+}
+
+.iconBorder {
+  padding: 8px;
+  border-radius: 50px;
+  border: $light solid 1px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .home {
+    .mt_model_1 {
+      margin-top: 112px;
+    }
+    .mt_model_2 {
+      margin-top: 60px;
+    }
+    .fs_title {
+      font-size: 48px;
+      line-height: 57px;
+    }
+    .blur_box {
+      border-radius: 40px;
+      .blur_box_pe_200 {
+        margin-right: 0;
+        padding: 60px 0;
+      }
+      .blur_box_move {
+        margin: -38px;
+      }
+      button {
+        width: 80%;
+        margin-top: 60px;
+      }
+    }
+  }
+
+  .about {
+    margin: 80px 0;
+
+  }
+  
+  .about img {
+    width: 100vw;
+    object-fit: cover;
+    z-index: -10;
+  }
+
+  .news {
+    padding: 80px 0;
+    
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  .about_card {
+    background: linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    background: linear-gradient(180deg, rgba(20, 15, 10, 0.8) 0%, rgba(190, 156, 124, 0.8) 100%);
+    margin-top: 40px;
+    border-radius: 40px 40px 0 40px;
+    padding: 24px;
+    border-left: $light solid 1px;
+    border-bottom: $light solid 1px;
+    .about_card_body {
+      margin-top: 40px;
+    }
+  }
+
+  .roomPeekCard {
+    .roomImg {
+      object-fit: cover;
+      height: 300px;
+      position: static;
+      width: 100%;
+    }
+    .row {
+      height: unset;
+    }
+  }
+
+  .food {
+  width: 300px;
+  height: 480px;
+  background-size: cover;
+  border-radius: 8px;
+}
+.traffic_map {
+  margin-top: 40px;
+  margin-bottom: 24px;
+
+}
+
+footer {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  img {
+    width: 196px;
+  }
+  .mb_40 {
+    margin-bottom: 0;
+  }
+  .me_80 {
+    margin-right: 80px;
+  }
+}
+}

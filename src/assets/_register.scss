@@ -1,0 +1,41 @@
+.logo_box {
+  padding-left: 80px;
+}
+.logo_size {
+  width: 196px;
+}
+
+.register_left {
+  width: 50%;
+  height: 100vh;
+  // height: 100%;
+  background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/typescript-hotel/%E6%A1%8C%E6%A9%9F%E7%89%88/register.png?raw=true');
+  background-size: cover;
+  background-position: center center;
+}
+
+.register_right {
+  width: 50%;
+  height: 100%;
+}
+
+.loginPage {
+  height: 100vh;
+}
+
+.register_hide {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .logo_size {
+    width: 110px;
+  }
+  .logo_box {
+    padding-left: 12px;
+  }
+  .register_right {
+    width: 100%;
+    height: 100%;
+  }
+}
